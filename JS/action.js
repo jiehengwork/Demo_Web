@@ -11,7 +11,7 @@ window.addEventListener('scroll',function() {
 // scroll down
   if (nowScrollY > lastScrollY) {
     if (hideHereY === 0) {
-      hideHereY = nowScrollY + 200;
+      hideHereY = nowScrollY + 100;
     }
     // already hide
     if (hideOrNot === true && nowScrollY > hideHereY) {
@@ -32,7 +32,7 @@ window.addEventListener('scroll',function() {
     }
     // already dsiplay
     else if (nowScrollY < displayHereY && hideOrNot === false) {
-      hideHereY = nowScrollY + 200;
+      hideHereY = nowScrollY + 100;
     }
   }
   lastScrollY = nowScrollY
@@ -43,7 +43,7 @@ window.addEventListener('scroll',function() {
 let ch_nav_items = ['關於', '購物車', '幫助', '花卉', '樹木', '松柏', '蘭花', '多肉植物']
 
 // Array for English textcontent
-let eng_nav_items = ['about', 'cart', 'halp', 'flowers', 'plants', 'pine & cypress', 'orchid', 'succulents']
+let eng_nav_items = ['about', 'cart', 'help', 'flowers', 'plants', 'pine & cypress', 'orchid', 'succulents']
 
 
 let nav_items = Array.from(document.getElementsByClassName('nav_item'));
@@ -62,10 +62,19 @@ nav_items.forEach(item => item.addEventListener('mouseleave', function (e) {
 }))
 
 /*=============== OPEN & CLOSE NAVBAR MENU (ON PHONE) ===============*/
-let nav_bar = document.querySelector('.nav_bar')
+let nav_bar = document.querySelector('.nav_bar');
 let body_classList = document.body.classList;
 
 nav_bar.addEventListener('click',function () {
   nav_bar.classList.toggle('bar_active');
   body_classList.toggle('hideMenu');
+})
+
+/*=============== CLOSE REMIND ===============*/
+let close_remind_icon = document.querySelector('.close_remind_icon');
+let remind_container = document.querySelector('.remind_container');
+let remind_classList = remind_container.classList;
+
+close_remind_icon.addEventListener('click',function () {
+  remind_classList.add('close');
 })
