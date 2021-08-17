@@ -5,52 +5,104 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Demo Web</title>
-  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/style.css">
   <!-- font awesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-  
+
+  <!-- HEADER -->
   <header class="header" id="header">
     <nav class="nav_container">
+      <!-- LOGO -->
       <div class="nav_logo">
         <a href="#home">DEMO</a>
       </div>
+      <!-- BAR -->
       <div class="nav_bar">
         <i class="fas fa-minus"></i>
         <i class="fas fa-minus"></i>
         <i class="fas fa-minus"></i>
       </div>
+      <!-- USER MENU -->
       <div class="nav_user_menu" id="nav_user_menu">
         <ul class="nav_list">
-          <label class="nav_item_lable"><li class="nav_item"><a href="#" class="nav_item_a">about</a></li></label>
-          <label class="nav_item_lable"><li class="nav_item"><a href="#" class="nav_item_a">cart</a></li></label>
-          <label class="nav_item_lable"><li class="nav_item"><a href="#" class="nav_item_a">halp</a></li></label>
+          <span class="nav_item_span"><li class="nav_item"><a href="#" class="nav_item_a">about</a></li></span>
+          <span class="nav_item_span"><li class="nav_item"><a href="#" class="nav_item_a">cart</a></li></span>
+          <span class="nav_item_span"><li class="nav_item"><a href="#" class="nav_item_a">help</a></li></span>
         </ul>
       </div>
+      <!-- SORT MENU -->
       <div class="nav_sort_menu" id="nav_sort_menu">
         <ul class="nav_list">
-          <label class="nav_item_lable"><li class="nav_item"><a href="#" class="nav_item_a">flowers</a></li></label>
-          <label class="nav_item_lable"><li class="nav_item"><a href="#" class="nav_item_a">plants</a></li></label>
-          <label class="nav_item_lable"><li class="nav_item"><a href="#" class="nav_item_a">pine & cypress</a></li></label>
-          <label class="nav_item_lable"><li class="nav_item"><a href="#" class="nav_item_a">orchid</a></li></label>
-          <label class="nav_item_lable"><li class="nav_item"><a href="#" class="nav_item_a">succulents</a></li></label>
+          <span class="nav_item_span"><li class="nav_item"><a href="#" class="nav_item_a">flowers</a></li></span>
+          <span class="nav_item_span"><li class="nav_item"><a href="#" class="nav_item_a">plants</a></li></span>
+          <span class="nav_item_span"><li class="nav_item"><a href="#" class="nav_item_a">pine & cypress</a></li></span>
+          <span class="nav_item_span"><li class="nav_item"><a href="#" class="nav_item_a">orchid</a></li></span>
+          <span class="nav_item_span"><li class="nav_item"><a href="#" class="nav_item_a">succulents</a></li></span>
         </ul>
       </div>
     </nav>
   </header>
 
+  <!-- UNDER HEADER -->
   <div class="under_header"></div>
 
+  <!-- REMIND -->
   <div class="remind_container">
     <span class="remind">支援響應式網頁，請使用行動裝置 or Chrome檢查工具觀看</span>
+    <i class="fas fa-times close_remind_icon"></i>
   </div>
 
-  <div class="test">
-    
+  <!-- SLIDER -->
+  <div class="slider_container">
+    <div class="slider">
+      <!-- slider button -->
+      <input type="radio" name="slider_radio" id="slider_radio1">
+      <input type="radio" name="slider_radio" id="slider_radio2">
+      <input type="radio" name="slider_radio" id="slider_radio3">
+      <input type="radio" name="slider_radio" id="slider_radio4">
+      <input type="radio" name="slider_radio" id="slider_radio5">
+      <!-- picture -->
+      <div class="slider_img first_slides">
+        <img src='./img/1.jpg' alt='' >
+      </div>
+      <div class="slider_img">
+        <img src='./img/2.jpg' alt='' >
+      </div>
+      <div class="slider_img">
+        <img src='./img/3.jpg' alt='' >
+      </div>
+      <div class="slider_img">
+        <img src='./img/4.jpg' alt='' >
+      </div>
+      <div class="slider_img">
+        <img src='./img/5.jpg' alt='' >
+      </div>
+    </div>
+    <!-- AUTOMATIC SLIDER -->
+    <div class="slider_auto_container">
+      <div class="auto_button1"></div>
+      <div class="auto_button2"></div>
+      <div class="auto_button3"></div>
+      <div class="auto_button4"></div>
+      <div class="auto_button5"></div>
+    </div>
   </div>
+  <!--  MANUAL SLIDER -->
+  <div class="slider_button_container">
+    <label for="slider_radio1" class="slider_button"></label>
+    <label for="slider_radio2" class="slider_button"></label>
+    <label for="slider_radio3" class="slider_button"></label>
+    <label for="slider_radio4" class="slider_button"></label>
+    <label for="slider_radio5" class="slider_button"></label>
+  </div>
+
+
+  <!-- test -->
+  <div class="test"></div>
   
-
+  <!-- JS -->
   <script src="./JS/action.js"></script>
 </body>
 </html>
