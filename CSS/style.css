@@ -203,9 +203,6 @@ body{
   display: flex;
 
   overflow: hidden;
-
-  align-items: flex-end;
-
 }
 /* limit img width for >1200px screen */
 @media (min-width: 1317px) {
@@ -222,7 +219,7 @@ body{
   display: none;
 }
 /* manual button */
-.munual_button_container {
+.manual_button_container {
   width: 100%;
   position: absolute;
   margin-bottom: 1%;
@@ -230,7 +227,7 @@ body{
   display: flex;
   justify-content: center;
 }
-.munual_button {
+.manual_button {
   width: 5%;
   border-top: solid 5px #ffffff;
 
@@ -239,10 +236,10 @@ body{
 
   transition: opacity 0.5s;
 }
-.munual_button:not(:last-child) {
+.manual_button:not(:last-child) {
   margin-right: 1%;
 }
-.munual_button:hover {
+.manual_button:hover {
   opacity: 1;
 }
  /* manual slider move */

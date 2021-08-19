@@ -78,3 +78,34 @@ let remind_classList = remind_container.classList;
 close_remind_icon.addEventListener('click',function () {
   remind_classList.add('close');
 })
+
+/*=============== AUTOMATIC SLIDER ===============*/
+let radios = Array.from(document.querySelectorAll('.slider_radio'));
+let sliderCounter = 0;
+let manual_buttons = Array.from(document.querySelectorAll('.manual_button'));
+
+// auto start
+radios[0].checked = true;
+
+setInterval(function () {
+  // find slider which is checked
+  sliderCounter = radios.findIndex(item => item.checked === true);
+  // auto
+  sliderCounter++;
+  if (sliderCounter > 4) {
+    sliderCounter = 0;
+  }
+  radios[sliderCounter].checked = true;
+  // now showing
+  manual_buttons.forEach(item => item.style.opacity = 0.5);
+  manual_buttons[sliderCounter].style.opacity = 1;
+}, 5000);
+
+// manual selet now showing slide
+let nowShowing = 0;
+
+radios.forEach(item => item.addEventListener('change', function () {
+  nowShowing = radios.findIndex(item => item.checked === true);
+  manual_buttons.forEach(item => item.style.opacity = 0.5);
+  manual_buttons[nowShowing].style.opacity = 1;
+}));
