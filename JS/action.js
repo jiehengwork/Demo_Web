@@ -99,7 +99,7 @@ setInterval(function () {
   // now showing
   manual_buttons.forEach(item => item.style.opacity = 0.5);
   manual_buttons[sliderCounter].style.opacity = 1;
-}, 5000);
+}, 6000);
 
 // manual selet now showing slide
 let nowShowing = 0;
@@ -109,3 +109,34 @@ radios.forEach(item => item.addEventListener('change', function () {
   manual_buttons.forEach(item => item.style.opacity = 0.5);
   manual_buttons[nowShowing].style.opacity = 1;
 }));
+
+/*=============== BUILD SORT DIV ===============*/
+sort_containers = Array.from(document.querySelectorAll('.sort_container'));
+let all_sort = ['flowers', 'plants', 'pine&cypress', 'orchid', 'succulents']
+
+window.addEventListener('load', function () {
+sort_containers.forEach(now_sort => {
+  let sortIndex = sort_containers.findIndex(item => item === now_sort)
+
+  for (let i = 0; i < 8; i++) {
+    if (i === 7) {
+      // want to add in sort_container
+      let sort_div = document.createElement("div");
+      let p = document.createElement('p');
+      p.textContent = 'More...'
+      sort_div.appendChild(p);
+      // add
+      sort_containers[sortIndex].appendChild(sort_div);
+    }
+    else {
+      // want to add in sort_container
+      let sort_div = document.createElement("div");
+      let img = document.createElement('img');
+      img.src = './img/sort-' + all_sort[sortIndex] +'/' + i + '.jpg';
+      sort_div.appendChild(img);
+      // add
+      sort_containers[sortIndex].appendChild(sort_div);
+    }
+  }
+})
+});

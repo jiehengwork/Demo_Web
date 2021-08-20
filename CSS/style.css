@@ -39,6 +39,7 @@
 html{
   scroll-behavior: smooth;
 }
+/* for remove blank at the button in img */
 img {
   display: block;
 }
@@ -196,6 +197,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: flex-end;
+
+  margin-bottom: 5vh;
 }
 .slider {
   max-width: var(--slider-width);
@@ -262,15 +265,50 @@ body{
   margin-left: -400%;
 }
 
-/*=============== test ===============*/
-div.test {
+/*=============== ALL SORT ===============*/
+/* sort title */
+.sort_title_container {
+  height: 10vh;
+
+  background-color: #eeeeee;
+}
+.sort_title {
+  display: inline-block;
+
+  margin-top: 3vh;
+  margin-left: 3vw;
+
+  padding: 0 2px;
+  border-bottom: solid 1px;
+}
+.sort_title p {
+  font-size: var(--h1-font-size);
+}
+/* sort */
+.sort_container {
   width: 100%;
-  height: 5000px;
+  padding-bottom: 0.5vw;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  background-color: #eeeeee;
+}
+.sort_container div {
+  width: 24vw;
+  margin-top: 0.5vw;
+
+  background-color: #ffffff;
+}
+.sort_container img {
+  width: 13vw;
 }
 
 /*=============== ********** ===============*/
-/*========== ON PHONE SCREEN ========== */
+/*========== ON MOBILE DEVICE SCREEN ========== */
 @media (max-width: 1025px) {
+
   /*=============== NAVBAR ===============*/
   /* container */
   .nav_container {
@@ -405,18 +443,39 @@ div.test {
     height: 87px;
     width: 100%;
   }
+
   /*=============== REMIND ===============*/
   /* x icon */
   .remind_container i {
     top: 91px;
   }
 
-  /*=============== SLIDER ===============*/
-  /* container */
-
-  /*=============== test ===============*/
-  div.test {
-    height: 5000px;
-    width: 100%;
+  /*=============== SORT ===============*/
+  /* sort title */
+  .sort_title p {
+    font-size: var(--h2-font-size);
   }
+}
+
+/*=============== ********** ===============*/
+/*========== ON PHONE SCREEN ========== */
+@media (max-width: 420px) {
+
+  /*=============== SORT ===============*/
+  /* sort title */
+  .sort_title_container {
+    height: 5vh;
+  }
+  .sort_title {
+    margin-top: 1vh;
+    margin-left: 5vw;
+  }
+  /* sort */
+  .sort_container div {
+    width: 49vw;
+  }
+  .sort_container img {
+    width: 30vw;
+  }
+  
 }
