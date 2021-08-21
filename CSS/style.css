@@ -300,9 +300,44 @@ body{
   margin-top: 0.5vw;
 
   background-color: #ffffff;
+
+  cursor: pointer;
+
+  /* for div::hover tarnsition */
+  overflow: hidden;
 }
 .sort_container img {
   width: 13vw;
+}
+/* hover */
+.sort_container div::after {
+  position: absolute;
+  top: -100%;
+
+  width: 11vw; /* 24 - 13 */
+  height: 100%;
+
+  margin-left: 13vw;
+
+  content: "商品內容";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--h2-font-size);
+
+  background-color: #dcffd5;
+
+  opacity: 0;
+}
+.sort_container div:hover::after {
+  top: 0;
+  opacity: 1;
+
+  transition: top 0.7s;
+}
+.sort_container div:hover {
+  transform: scale3d(1.05,1.05,1);
+  transition: 0.5s;
 }
 
 /*=============== ********** ===============*/
@@ -455,6 +490,10 @@ body{
   .sort_title p {
     font-size: var(--h2-font-size);
   }
+  /* hover */
+  .sort_container div::after {
+    font-size: var(--h3-font-size);
+  }
 }
 
 /*=============== ********** ===============*/
@@ -477,5 +516,9 @@ body{
   .sort_container img {
     width: 30vw;
   }
-  
+  /* hover */
+  .sort_container div::after {
+    width: 19vw; /* 24 - 13 */
+    margin-left: 30vw;
+  }  
 }
