@@ -309,6 +309,17 @@ body{
 .sort_container img {
   width: 13vw;
 }
+/* more */
+.sort_container p {
+  width: 13vw;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: var(--h1-font-size);
+}
 /* hover */
 .sort_container div::after {
   position: absolute;
@@ -319,7 +330,7 @@ body{
 
   margin-left: 13vw;
 
-  content: "商品內容";
+  content: "了解更多";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -338,6 +349,69 @@ body{
 .sort_container div:hover {
   transform: scale3d(1.05,1.05,1);
   transition: 0.5s;
+}
+
+.all_sort_container {
+  padding-bottom: 15vh;
+}
+
+/*=============== FOOTER ===============*/
+.footer_container {
+  width: 100%;
+  min-height: 35vh;
+  display: flex;
+
+  padding-top: 8vh;
+  background-color: #000000;
+}
+.footer_row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+
+  color: #eeeeee;
+}
+.footer_col {
+  min-width: 25%;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 10%;
+}
+
+/* content */
+.footer_col p {
+  display: block;
+  width: 100%;
+
+  font-size: var(--h2-font-size);
+
+  margin-bottom: 5vh;
+
+  text-align: center;
+}
+.footer_col ul {
+  width: 100%;
+}
+.footer_col li {  
+  text-align: center;
+  margin-bottom: 3vh;
+}
+.footer_col a {
+  font-size: var(--normal-font-size);
+
+  color: #eeeeee;
+  text-decoration: none;
+}
+/* icon */
+.footer_icon {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
 }
 
 /*=============== ********** ===============*/
@@ -494,6 +568,10 @@ body{
   .sort_container div::after {
     font-size: var(--h3-font-size);
   }
+  /* more */
+  .sort_container p {
+  font-size: var(--h2-font-size);
+  }
 }
 
 /*=============== ********** ===============*/
@@ -516,9 +594,23 @@ body{
   .sort_container img {
     width: 30vw;
   }
+  /* more */
+  .sort_container p {
+    width: 30vw;
+    
+    font-size: var(--h3-font-size);
+  }
   /* hover */
   .sort_container div::after {
     width: 19vw; /* 24 - 13 */
     margin-left: 30vw;
-  }  
+  }
+
+  /*=============== FOOTER ===============*/
+  .footer_col {
+    min-width: 100%;
+  }
+  .footer_col {
+    margin-bottom: 10%;
+  }
 }
